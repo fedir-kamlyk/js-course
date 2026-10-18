@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 6</title>
+</head>
+<body>
+    <h1>Задача 6</h1>
+    <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+
+    <script>
+        const Price1 = parseFloat(prompt('Введіть вартість 1-го товару:', '10.99').replace(',', '.'));
+        const Quant1 = parseInt(prompt('Введіть кількість 1-го товару:', '2'));
+        const Cost1 = Price1 * Quant1;
+
+        const Price2 = parseFloat(prompt('Введіть вартість 2-го товару:', '25.30').replace(',', '.'));
+        const Quant2 = parseInt(prompt('Введіть кількість 2-го товару:', '3'));
+        const Cost2 = Price2 * Quant2;
+
+        const Price3 = parseFloat(prompt('Введіть вартість 3-го товару:', '50.25').replace(',', '.'));
+        const Quant3 = parseInt(prompt('Введіть кількість 3-го товару:', '1'));
+        const Cost3 = Price3 * Quant3;
+
+        const totalCost = Cost1 + Cost2 + Cost3;
+
+        document.write(`
+            <div style="border: 1px solid black; width: 250px; padding: 10px;">
+                <h3>КАСОВИЙ ЧЕК</h3>
+                <hr>
+                <p>
+                    Товар №1<br>
+                    ${Quant1} шт. x ${Price1.toFixed(2)} = ${Cost1.toFixed(2)} грн
+                </p>
+                <p>
+                    Товар №2<br>
+                    ${Quant2} шт. x ${Price2.toFixed(2)} = ${Cost2.toFixed(2)} грн
+                </p>
+                <p>
+                    Товар №3<br>
+                    ${Quant3} шт. x ${Price3.toFixed(2)} = ${Cost3.toFixed(2)} грн
+                </p>
+                <hr>
+                <p>
+                    <b>ЗАГАЛЬНА ВАРТІСТЬ: ${totalCost.toFixed(2)} грн</b>
+                </p>
+            </div>`);
+    </script>
+</body>
+</html>

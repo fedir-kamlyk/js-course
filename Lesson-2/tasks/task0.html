@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 0</title>
+</head>
+<body>
+    <h1>Задача 0</h1>
+    <p>
+        Обчислити значення виразів:<br>
+        1) S<sub>1</sub> = a + 12 + b<br>
+        2) S<sub>2</sub> = &radic;((a + b) / 2a)<br>
+        3) S<sub>3</sub> = &#8731;((a + b)c)<br>
+        4) S<sub>4</sub> = sin(a / -b)
+    </p>
+
+    <script>
+        const a = parseFloat(prompt('Введіть значення a:', '0').replace(',', '.'));
+        const b = parseFloat(prompt('Введіть значення b:', '0').replace(',', '.'));
+        const c = parseFloat(prompt('Введіть значення c:', '0').replace(',', '.'));
+
+        const s1 = a+12+b;
+        const s2 = Math.sqrt((a+b)/(2*a));
+        const s3 = Math.cbrt((a+b)*c);
+        const s4 = Math.sin(a/-b);
+
+        document.write(`
+        s1 = ${s1}; <br>
+        s2 = ${s2}; <br>
+        s3 = ${s3}; <br>
+        s4 = ${s4}.`);
+    </script>
+</body>
+</html>

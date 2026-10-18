@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 4</title>
+</head>
+<body>
+    <h1>Задача 4</h1>
+    <p>
+        Дано довжину у сантиметрах. Визначити скільки це метрів і кілометрів.
+    </p>
+
+    <script>
+        const smLength = parseFloat(prompt('Введіть довжину у сантиметрах:', '100000').replace(',', '.'));
+        const mLength = smLength / 100;
+        const kmLength = mLength / 1000;
+    
+        if (smLength < 0) {
+            alert(`Помилка! Довжина не може бути від'ємною.`);
+            document.write(`Довжина не може бути від'ємною.`);
+        } else {
+            document.write(`${smLength} см. - це ${mLength} м. або ${kmLength} км.`);
+        }
+    </script>
+</body>
+</html>

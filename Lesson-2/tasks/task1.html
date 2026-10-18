@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 1</title>
+</head>
+<body>
+    <h1>Задача 1</h1>
+    <p>
+        Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці.
+    </p>
+
+    <script>
+        const firstNum = parseFloat(prompt('Введіть значення першого дійсного числа:', '0').replace(',', '.'));
+        const secondNum = parseFloat(prompt('Введіть значення другого дійсного числа:', '0').replace(',', '.'));
+
+        const Sum = firstNum + secondNum;
+        const Prod = firstNum * secondNum;
+        let Div;
+        if (secondNum === 0) {
+            alert('Помилка! На нуль ділити не можна.');
+            Div = 'Помилка (ділення на нуль)';
+        } else {
+            Div = firstNum / secondNum;
+        }
+
+        document.write(`
+        <table border="1" cellpadding="8" style="border-collapse: collapse; text-align: left;">
+                <tr>
+                    <th>Операція</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td>Сума</td>
+                    <td>${Sum}</td>
+                </tr>
+                <tr>
+                    <td>Добуток</td>
+                    <td>${Prod}</td>
+                </tr>
+                <tr>
+                    <td>Частка</td>
+                    <td>${Div}</td>
+                </tr>
+            </table>`);
+    </script>
+</body>
+</html>
